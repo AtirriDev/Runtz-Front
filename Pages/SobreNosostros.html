@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Runtz</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <div id="navbar-container"></div>
+   
+    
+
+    <main class="container bg-gray-300 mx-auto px-4 py-8">
+        <section class="text-gray-700 mb-8">
+            <h2 class="text-3xl  mb-6 text-gray-800 font-['Lobster']" >Nuestra Historia</h2>
+            <p class="text-lg leading-relaxed mb-6">
+                En Runtz, nacimos de la pasión compartida por el básquet y la cultura urbana. Fundada en el corazón de Buenos Aires en 2010, nuestra marca comenzó como un pequeño emprendimiento entre amigos que buscaban expresar su amor por el deporte a través de la ropa que llevaban. Nos inspiramos en la energía de las canchas callejeras, el arte del graffiti y el ritmo de la música que define el estilo urbano.
+            </p>
+            <p class="text-lg leading-relaxed mb-6">
+                Desde nuestros inicios, en Runtz nos dedicamos a ofrecer indumentaria y calzado que no solo se vean bien, sino que acompañen tu ritmo dentro y fuera de la cancha. Seleccionamos cuidadosamente cada producto para combinar estilo urbano con el rendimiento que el básquet exige.
+            </p>
+            <p class="text-lg leading-relaxed">
+                Hoy Runtz es una marca reconocida en toda Argentina, con presencia en las principales ciudades y una comunidad en constante crecimiento que comparte nuestra pasión. Seguimos comprometidos con la calidad, la innovación y el diseño, para que puedas expresar un estilo auténtico donde sea que vayas.
+            </p>
+        </section>
+
+        
+    </main>
+    <section class="bg-white mt-6 mx-8">
+        <div class="grid grid-cols-3 gap-4 mb-8 mx-auto ">
+            <div class="row-span-2">
+                <img src="../Recursos/Street1.jpg" alt="Graffiti de básquet" class="w-full h-full object-cover  shadow-md">
+            </div>
+            <div>
+                <img src="../Recursos/Street2.jpg" alt="Cancha de básquet vacía" class="w-full h-full object-cover shadow-md aspect-[3.2/3.6]">
+            </div>
+            <div class="row-span-2">
+                <img src="../Recursos/street5.jpg" alt="Jugador de básquet urbano" class="w-full h-full object-cover  shadow-md">
+            </div>
+            <div>
+             
+                <img src="../Recursos/street3.jpg" alt="Canasta de básquet en la calle" class="w-full h-full object-cover shadow-md aspect-[3.2/3.6]">
+            </div>
+        </section>
+    </section>
+    <section class="w-full py-6 bg-white">
+        <div class="container mx-auto px-4 flex justify-center gap-12 items-center">
+            <div class="w-12 h-12">
+               <a href=""></a> <img src="https://static.vecteezy.com/system/resources/previews/008/385/736/non_2x/instagram-social-media-icon-symbol-element-illustration-free-vector.jpg" alt="" class="w-full h-full">
+            </div>
+            <div class="w-12 h-12">
+                <img src="https://img.freepik.com/vector-premium/nuevo-vector-logotipo-twitter-x_768467-92.jpg?semt=ais_hybrid" alt="" class="w-full h-full">
+            </div>
+            <div class="w-12 h-12">
+                <img src="https://static.vecteezy.com/system/resources/previews/014/035/547/non_2x/youtube-logo-isolated-white-background-illustration-free-vector.jpg" alt="" class="w-full h-full">
+            </div>
+            <div class="w-12 h-12">
+                <img src="https://img.freepik.com/vector-premium/logotipo-redondo-twitter-aislado-sobre-fondo-blanco_469489-899.jpg" alt="" class="w-full h-full">
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black text-white py-6 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-white">&copy; 2025 Runtz. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script>
+        const hamburgerBtn = document.getElementById("hamburger-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const closeMenuBtn = document.getElementById("close-menu-btn");
+      
+        function toggleMobileMenu() {
+          mobileMenu.classList.toggle("hidden");
+        }
+      
+        hamburgerBtn.addEventListener("click", toggleMobileMenu);
+        closeMenuBtn.addEventListener("click", toggleMobileMenu);
+      
+       
+        window.addEventListener('resize', () => {
+        if (window.innerWidth >= 768) {
+            mobileMenu.classList.add('hidden'); // Oculta el menú mobile
+        }
+        });
+      </script>
+</body>
+  <script type="module" src="./JsUnificado.js"></script>
+</html>

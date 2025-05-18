@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Runtz</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-300">
+    <div id="navbar-container"></div>
+
+    <section class="bg-white py-16 md:py-24">
+        <div class="container mx-auto px-4 text-center">
+            <img src="/Recursos/Para flyer.jpg" alt="">
+        </div>
+    </section>
+    <div class="bg-white-300 h-2 w-full">
+    <div class="contenedorModal ">
+        <div id="modal" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center hidden">
+                <div class="bg-white rounded-lg p-6 w-80 max-w-full shadow-lg flex  flex-col justify-center ">
+                    <h2 class="bg-black rounded-md text-white text-xl font-semibold mb-4 py-2 px-2" id="titulo">Alerta</h2>
+                    <p class="mb-4 px-4">Producto ya existente en el carrito. verifique y agregue nuevamente.</p>
+                    <div class="flex flex-row gap-4">   
+                        <a href="./carrito.html" class="text-gray-700 m-2">
+                                    <i id="carritoIcon" class="fas fa-shopping-cart text-black hover:text-gray-500"></i>
+                        </a>  
+                         <button id="CerrarModal" class="bg-red-600 text-white  py-1 rounded hover:bg-red-700 w-20 hover:bg-white hover:text-black hover:border-2 hover:border-black self-end ">
+                                Cerrar
+                         </button>
+                    </div>             
+                               
+                               
+                  
+                   
+                </div>
+        </div> 
+    </div>
+    </div>
+     <section class="bg-white"> 
+        <div id="track-carousel-container" class="w-full overflow-hidden bg-white p-4  shadow-lg ">
+            
+            <div id="logos-track" class="flex flex-nowrap">
+                <div class="flex-shrink-0 w-40 h-40  flex items-center justify-center  p-3 mx-2 ">
+                    <img src="/Recursos/LogoNike.png" alt="Logo Nike" class="w-full h-full ">
+                </div>
+                <div class="flex-shrink-0 w-640 h-40  flex items-center justify-center  p-3 mx-2 ">
+                    <img src="/Recursos/LogoAdidasOriginal.png" alt="Logo Adidas" class="w-full h-full ">
+                </div>
+                <div class="flex-shrink-0 w-40 h-40  flex items-center justify-center  p-3 mx-2 ">
+                    <img src="/Recursos/jordan-logo-black-jumpman-logo-f.png" alt="Logo Jordan" class="w-full h-full ">
+                </div>
+                <div class="flex-shrink-0 w-40 h-40  flex items-center justify-center  p-3 mx-2 ">
+                    <img src="/Recursos/LogoReebok.png" alt="Logo Reebook" class="w-full h-full ">
+                </div>
+                <div class="flex-shrink-0 w-40 h-40  flex items-center justify-center  p-3 mx-2 ">
+                    <img src="/Recursos/puma-logo-black-symbol-with-name.png" alt="Logo Puma" class="w-full h-full ">
+                </div>
+                <div class="flex-shrink-0 w-40 h-40  flex items-center justify-center  p-3 mx-2 ">
+                    <img src="/Recursos/LogoNewEra.png" alt="Logo LogoNewEra" class="w-full h-full ">
+                </div>
+                <div class="flex-shrink-0 w-40 h-40  flex items-center justify-center  p-3 mx-2 ">
+                    <img src="/Recursos/UnderArmour.png" alt="Logo UnderArmour" class="w-full h-full ">
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <section class="bg-gray-300 py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-5xl font-semibold text-gray-800 text-center mb-8 font-['Lobster']">Productos Destacados</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" id="contProductos">
+           
+            </div>
+        </div>
+        
+    </section>
+    <section class="bg-gray-300 ">
+        <div class="container px-6 py-10 mx-auto">
+            <h1 class="text-2xl text-center g:text-5xl font-['Lobster'] ">Nuestras<br><span class="text-black font-semibold font-['Lobster'] text-6xl"> Categorias</span></h1>
+
+            <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-16 md:grid-cols-3 xl:grid-cols-3">
+                <div class="flex flex-col items-center p-6 space-y-3 text-center bg-white rounded-xl dark:bg-gray-800">
+                    <span class="inline-block p-3 text-blue-500 bg-blue-100 rounded-full dark:text-white dark:bg-blue-500">
+                         <img src="../Recursos/basketball-jersey_1454414.png" class=" h-8" alt="">
+                    </span>
+
+                    <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white font-['Lobster']">Indumentaria</h1>
+                     <img  class="h-80" src="https://cdn-images.farfetch-contents.com/18/26/71/50/18267150_39011899_600.jpg" alt="Bomber Jacket NBA Logos">
+                    
+
+                    <a href="productos.html?categoria=Indumentaria" class="flex items-center -mx-1 text-sm text-blue-500 capitalize transition-colors duration-300 transform dark:text-blue-400 hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                        <span class="mx-1">ver mas </span>
+                        <svg class="w-4 h-4 mx-1 rtl:-scale-x-100" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    </a>
+                </div>
+
+                <div class="flex flex-col items-center p-6 space-y-3 text-center bg-white rounded-xl dark:bg-gray-800">
+                    <span class="inline-block p-3 text-blue-500 bg-blue-100 rounded-full dark:text-white dark:bg-blue-500">
+                        <img src="../Recursos/boot_8998342.png" class=" h-8" alt="">
+                    </span>
+
+                    <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white font-['Lobster']">Calzado</h1>
+                    <img  class="h-80" src="https://media.gq.com.mx/photos/6499c84648a0450eaa66850a/master/w_1600%2Cc_limit/382.jpg" alt="Air Jordan 38">
+                   
+
+                    <a href="productos.html?categoria=Calzado" class="flex items-center -mx-1 text-sm text-blue-500 capitalize transition-colors duration-300 transform dark:text-blue-400 hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                        <span class="mx-1">ver mas </span>
+                        <svg class="w-4 h-4 mx-1 rtl:-scale-x-100" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    </a>
+                </div>
+
+                <div class="flex flex-col items-center p-6 space-y-3 text-center bg-white rounded-xl dark:bg-gray-800">
+                    <span class="inline-block p-3 text-blue-500 bg-blue-100 rounded-full dark:text-white dark:bg-blue-500">
+                        <img src="../Recursos/cap_2742882.png" class=" h-8" alt="">
+                    </span>
+
+                    <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white font-['Lobster']">Accesorios</h1>
+                     <img  class="h-80" src="https://ferreira.vtexassets.com/arquivos/ids/424385/nba_27660NEGRO.jpg?v=638388689104530000" alt="Bolzo Chicago Bulls">
+                    
+
+                    <a href="productos.html?categoria=Accesorios" class="flex items-center -mx-1 text-sm text-blue-500 capitalize transition-colors duration-300 transform dark:text-blue-400 hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                        <span class="mx-1">ver mas</span>
+                        <svg class="w-4 h-4 mx-1 rtl:-scale-x-100" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+</section>
+   
+    <div class="bg-white-700 h-2 w-full">
+
+    </div>
+    <div class="bg-white mx-auto px-4 py-8">
+        <div class="container mx-auto">
+            <img src="/Recursos/ball dont lie .jpg" alt="Imagen de prueba" class="block mx-auto">
+        </div>
+    </div>
+      
+
+    <footer class="bg-black text-white py-6">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-white">&copy; 2025 Runtz. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        const hamburgerBtn = document.getElementById("hamburger-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const closeMenuBtn = document.getElementById("close-menu-btn");
+      
+        function toggleMobileMenu() {
+          mobileMenu.classList.toggle("hidden");
+        }
+      
+        hamburgerBtn.addEventListener("click", toggleMobileMenu);
+        closeMenuBtn.addEventListener("click", toggleMobileMenu);
+      
+        // Cierra al hacer clic fuera
+        document.addEventListener("click", (event) => {
+          if (!mobileMenu.classList.contains("hidden") &&
+              !mobileMenu.contains(event.target) &&
+              !hamburgerBtn.contains(event.target)) {
+            mobileMenu.classList.add("hidden");
+          }
+        });
+
+     
+    </script>
+</body>
+    <script type="module" src="./home.Animaciones.js"></script>
+   <script type="module" src="./JsUnificado.js"></script>
+</html>
