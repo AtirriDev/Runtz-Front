@@ -249,9 +249,9 @@ function agregarAlCarrito(idProducto) {
     
     // Obtenemos el catálogo del localStorage
     const catalogo = JSON.parse(localStorage.getItem("Catalogo")) || [];
-
+    
     // Buscamos el producto por id en el catálogo
-    const producto = catalogo.find(p => p.id === Number(idProducto));
+    const producto = catalogo.find(p => p._id === idProducto);
 
     if (!producto) {
        console.log("Producto no encontrado")
@@ -263,7 +263,7 @@ function agregarAlCarrito(idProducto) {
 
     
     // Verificamos si ya está en el carrito
-    const yaEnCarrito = carrito.some(p => Number(p.id) === Number(idProducto));
+    const yaEnCarrito = carrito.some(p => p._id === idProducto);
       if (yaEnCarrito) {
           console.log("no se puede agregar ")
           modal.querySelector('#titulo').textContent = "Alerta";
@@ -297,7 +297,9 @@ btnCerrarModal.addEventListener("click", function (event) {
       const modal = document.getElementById('modal');
       modal.classList.add('hidden')
     });
-// Funcion para actualizar el contador del carrito 
+
+
+    // Funcion para actualizar el contador del carrito 
 function actualizarContadorCarrito() {
     const CarritoIcon = document.getElementById('carritoIcon')
     const contador = document.getElementById('ContadorCarrito');

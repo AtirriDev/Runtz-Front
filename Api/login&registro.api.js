@@ -3,20 +3,29 @@ import { API } from "./api.js";
 
 
 // Funcion de login 
-export const Login = async (Usuario) => {
+export const Login = async (credencialUsuario) => {
     try {
         const res = await fetch(`${API}/Usuarios/login`, {
             method: "POST",
             headers: { 
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(Usuario)  // le mandamos los datos del usuario en el login 
+            body: JSON.stringify(credencialUsuario)  // le mandamos los datos del usuario en el login 
         });
+
+        //  verificar si la respuesta es status 200 o un error
+        if (!res.ok) {
+            console.log("entre aca boludo")
+            const errorData = await res.json();
+            // Lanzar un error para que el bloque catch del evento click lo maneje
+            throw new Error(errorData.message || 'Error en las credenciales');
+        }
 
         const data = await res.json();
         return data;
     } catch (error) {
-        console.log(error);
+        console.log(error +"lalalal");
+        throw error; // Propagar el error para que sea manejado por el llamador
     }
 }
 

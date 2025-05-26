@@ -12,7 +12,7 @@ export function CardCarrito(producto){
                         
                         
                         <p class="text-black font-bold text-center">$${precioFormateado}</p>
-                        <button  data-id="${producto.id}" class="btnEliminar mt-2 bg-red-700 text-white hover:bg-white hover:text-black  font-semibold  rounded-full transition duration-300 w-full  hover:border-2 hover:border-black py-2">
+                        <button  data-id="${producto._id}" class="btnEliminar mt-2 bg-red-700 text-white hover:bg-white hover:text-black  font-semibold  rounded-full transition duration-300 w-full  hover:border-2 hover:border-black py-2">
                             Eliminar
                         </button>
                     </div>

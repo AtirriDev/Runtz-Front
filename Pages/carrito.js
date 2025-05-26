@@ -77,11 +77,11 @@ document.addEventListener("DOMContentLoaded", function () {
            console.log("vamos a cargar la venta")
            // Traemos al usuario desde el local 
 
-          const usuario = JSON.parse(sessionStorage.getItem("Usuario"));
+          const usuario = JSON.parse(sessionStorage.getItem("usuario"));
           // ahora tenemos que formar el array de productos que son solo sus ids 
             
             const carrito = JSON.parse(sessionStorage.getItem('carrito')) || [];
-            const idsCarrito = carrito.map(item => item.id);
+            const idsCarrito = carrito.map(item => item._id);
          
             // verificamos que hay un usuario logeado  y productos en el carrito 
           
@@ -156,7 +156,7 @@ function EliminarDelCarrito(idProducto) {
     
    
     // Filtramos el carrito sacando el producto con el id a eliminar 
-    const nuevoCarrito = carrito.filter(p => Number(p.id) !== Number(idProducto));
+    const nuevoCarrito = carrito.filter(p => p._id !== idProducto);
     
     
 

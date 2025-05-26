@@ -27,7 +27,7 @@ export const productosdata = async()=>{
 
 export const productosCategoria = async (categoria) => {
     try {
-        const res = await fetch(`${API}/productos`, {
+        const res = await fetch(`${API}/productos/categorias`, {
             method: "POST",
             headers: { 
                 'Content-Type': 'application/json'

@@ -52,12 +52,31 @@ btnLogin.addEventListener('click', async function (event) {
             AlertaLogin.classList.remove('hidden')
 
         } else {
-           sessionStorage.setItem('Usuario', JSON.stringify(respuesta));
-            // Redirige si el login fue exitoso
-            window.location.href = './Pages/home.html';
+                const token = respuesta.token;
+                const datosUsuario = respuesta.datosUsuario;
+
+                if (token) {
+                    sessionStorage.setItem('token', token);
+                    sessionStorage.setItem('usuario', JSON.stringify(datosUsuario));
+                    window.location.href = './Pages/home.html';
+                }
         }
     } catch (error) {
-        console.error('Error en el login:', error);
+        console.log("hola soy el error " + error)
+        // 5. Tomamos cualquier error que lance 
+        // Esto incluye:
+        // - Errores de credenciales (ej. 'Contraseña incorrecta' de tu backend 401)
+        // - Errores de red
+        // - Cualquier otro error que 'Login' haya propagado
+        
+        console.error('Error durante el proceso de login:', error);
+        
+        // Mostramos el mensaje de error al usuario
+        // 'error.message' contendrá el mensaje exacto que tu función Login lanzó
+        
+        // mostrar la alerta , le sacamos el hidden
+        AlertaLogin.classList.remove('hidden')
+        AlertaLogin.querySelector('p').textContent = error;
     }
 });
 
