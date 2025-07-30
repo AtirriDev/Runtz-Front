@@ -89,6 +89,9 @@ console.log("Script cargado correctamente.");
 
     // para todos los productos
     renderizarProductosEnContenedor('contProductos2', productos);
+
+    //Productos Sugerencias para pagina detalle 
+    renderizarProductosEnContenedor('contSugerencias',);
           
  
    

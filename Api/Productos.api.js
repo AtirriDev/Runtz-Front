@@ -41,3 +41,21 @@ export const productosCategoria = async (categoria) => {
         console.log(error);
     }
 }
+
+
+// Obtener producto por Id
+export const productoPorId = async (id) => {
+    try {
+        const res = await fetch(`${API}/productos/buscar/${id}`, {
+            method: "GET",
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+
+        const data = await res.json();
+        return data;
+    } catch (error) {
+        console.log('Error al obtener producto por ID:', error);
+    }
+};

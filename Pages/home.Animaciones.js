@@ -3,6 +3,9 @@
 
 
 
+import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+	
 document.addEventListener('DOMContentLoaded', function () {
     const track = document.getElementById('logos-track');
     const container = document.getElementById('track-carousel-container');
@@ -83,6 +86,47 @@ document.addEventListener('DOMContentLoaded', function () {
         if (window.innerWidth >= 768) {
             mobileMenu.classList.add('hidden'); // Oculta el menú mobile
         }
+    });
+
+        
+
+    // chat embebido de asistente virtual 
+    createChat({
+            webhookUrl: 'https://atirri.site/webhook/3c068f8e-d4cf-4335-af8b-544e881b88db/chat',
+            webhookConfig: {
+                method: 'POST',
+                headers: {}
+            },
+            target: '#n8n-chat',
+            mode: 'window',
+            chatInputKey: 'chatInput',
+            chatSessionKey: 'sessionId',
+            metadata: {},
+            showWelcomeScreen: false,
+            defaultLanguage: 'en',
+            initialMessages: [
+                'Hola soy Kobe 🤖🏀',
+                'Estoy aqui para asesorarte en cualquier duda que tengas sobre nuestros servicios.'
+            ],
+            i18n: {
+                en: {
+                    title: 'Runtz 💎',
+                    subtitle: "Asistencia las 24 hrs , a la altura de  Magic Johnson en los Lakers 👨🏿‍🦲 ",
+                    footer: '',
+                    getStarted: 'New Conversation',
+                    inputPlaceholder: 'Escribe tu consulta..',
+                },
+            },
+   });
+   // VIDEO FLYER
+   const video = document.getElementById('videoFlyer');
+
+    video.addEventListener('ended', () => {
+        setTimeout(() => {
+        video.currentTime = 0;
+        video.play();
+        }, 15000); // 25 SEGUNDOS HASTA QUE VUELVA A EMPEZAR
+
     });
 });
 

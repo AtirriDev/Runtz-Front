@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         body {
@@ -17,12 +18,22 @@
 </head>
 <body class="bg-gray-300">
     <div id="navbar-container"></div>
+    
+    <div class="bg-white py-16 md:py-24">
+        <div class="container mx-auto px-4">
+            <video id="videoFlyer" autoplay muted playsinline class="w-full  mx-auto rounded-lg shadow">
+            <source src="../Recursos/runtz flyer final.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
 
+    <!--
     <section class="bg-white py-16 md:py-24">
         <div class="container mx-auto px-4 text-center">
             <img src="/Recursos/Para flyer.jpg" alt="">
         </div>
     </section>
+     -->
     <div class="bg-white-300 h-2 w-full">
     <div class="contenedorModal ">
        <div id="modal" class="fixed inset-0 backdrop-blur-sm bg-black/40 flex items-center justify-center hidden z-50">
@@ -194,9 +205,10 @@
               !hamburgerBtn.contains(event.target)) {
             mobileMenu.classList.add("hidden");
           }
+          
         });
 
-     
+         
     </script>
 </body>
     <script type="module" src="./home.Animaciones.js"></script>

@@ -1,6 +1,8 @@
 import { CardCarrito } from "../Componentes/cardCarrito.js";
 import { CargarVenta } from "../Api/ventas.api.js";
 
+import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
 // aca vamos a poner toda la funcionalidad de tomar los productos del session storage mostrar y subir pasar la compra al back 
 
 
@@ -19,7 +21,34 @@ window.addEventListener('load',async () => {
     renderizarProductosEnContenedor('contenedor-carrito',ProductosCarrito);
     actualizarTotal();
 
-   
+   // chat embebido de asistente virtual 
+       createChat({
+               webhookUrl: 'https://atirri.site/webhook/3c068f8e-d4cf-4335-af8b-544e881b88db/chat',
+               webhookConfig: {
+                   method: 'POST',
+                   headers: {}
+               },
+               target: '#n8n-chat',
+               mode: 'window',
+               chatInputKey: 'chatInput',
+               chatSessionKey: 'sessionId',
+               metadata: {},
+               showWelcomeScreen: false,
+               defaultLanguage: 'en',
+               initialMessages: [
+                   'Hola soy Kobe 🤖🏀',
+                   'Estoy aqui para asesorarte en cualquier duda que tengas sobre nuestros servicios.'
+               ],
+               i18n: {
+                   en: {
+                       title: 'Runtz 💎',
+                       subtitle: "Asistencia las 24 hrs , a la altura de  Magic Johnson en los Lakers 👨🏿‍🦲 ",
+                       footer: '',
+                       getStarted: 'New Conversation',
+                       inputPlaceholder: 'Escribe tu consulta..',
+                   },
+               },
+      });
     
 }
 );
