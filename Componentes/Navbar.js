@@ -13,7 +13,7 @@ export const navbar = `
 <header class="bg-white py-4">
   <div class="container mx-auto px-4 flex justify-between items-center">
     <a href="${urlBase}Pages/home.html">
-      <img src="${urlBase}Recursos/LogoRuntz.png" alt="Logo" class="w-[100px] h-[50px]">
+      <img src="../Recursos/LogoRuntz.png" alt="Logo" class="w-[100px] h-[50px]">
     </a>
 
     <!-- Menú desktop -->
